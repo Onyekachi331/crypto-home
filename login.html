@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="about img.png" type="image/x-icon">
+    <title>Crypto Homes| Login Page</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    header {
+        background-color: orange;
+        padding: 20px 0px;
+        display: flex;
+        align-items: center;
+    }
+    
+    header button {
+        padding: 10px;
+        margin-left: 20px;
+        width: 100px;
+        background-color: black;
+        color: white;
+        border: none;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: all .5s;
+        animation: color 6s infinite;
+    }
+    
+    @keyframes color {
+        from {
+            background-color: brown;
+        }
+        to {
+            background-color: black;
+            transform: scale(1.1);
+        }
+    }
+    
+    .form-group1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 0px;
+    }
+    
+    .form-hold1 {
+        width: 420px;
+        padding: 20px;
+        padding-bottom: 40px;
+        box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.30);
+    }
+    
+    .form-hold1 h1 {
+        animation: move 7s infinite;
+    }
+    
+    @keyframes move {
+        from {
+            margin-left: 0px;
+        }
+        to {
+            margin-left: 30px;
+            color: rgb(211, 138, 3);
+        }
+    }
+    
+    .form-hold1 .input {
+        display: block;
+        margin: auto;
+        width: 95%;
+        padding: 10px;
+        margin-top: 20px;
+        font-size: 17px;
+    }
+    
+    .form-hold1 select {
+        display: block;
+        margin: auto;
+        width: 101%;
+        padding: 12px 10px;
+        margin-top: 20px;
+        font-size: 17px;
+    }
+    
+    .form-hold1 select:focus {
+        border: 1px solid orange;
+    }
+    
+    .form-hold1 .input:focus {
+        border: 1px solid orange;
+    }
+    
+    .terms {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .btn-area {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .btn-area button {
+        padding: 10px;
+        width: 35%;
+        margin: 0px 20px;
+        transition: all .5s;
+    }
+    
+    .btn-area button:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    
+    .btn-area .reset-btn {
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+    
+    .btn-area .submit-btn {
+        background-color: rgb(202, 133, 3);
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+    
+    footer {
+        background-color: rgb(43, 39, 39);
+        padding: 1px 0px;
+    }
+    
+    footer p {
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+    
+    @media screen and (max-width: 720px) {
+        header {
+            display: block;
+            align-items: center;
+            justify-content: center;
+        }
+        header button {
+            display: block;
+            margin: auto;
+        }
+        header button a {
+            text-decoration: none;
+        }
+        .form-group .form-hold {
+            width: 350px;
+        }
+    }
+    /* LOGIN SECTION */
+    
+    .form-group {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.747);
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        visibility: hidden;
+    }
+    
+    .center .form-hold {
+        background-color: white;
+        padding: 20px;
+        padding-bottom: 50px;
+        width: 400px;
+    }
+    
+    .form-hold h1 {
+        margin-top: 30px;
+        text-align: center;
+    }
+    
+    .form-hold input {
+        display: block;
+        width: 94%;
+        padding: 10px;
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+    
+    .form-hold label {
+        font-size: 18px;
+        cursor: pointer;
+    }
+    
+    .log-btn {
+        background-color: #fff;
+        padding: 8px 17px;
+        font-weight: bold;
+        border-radius: 4px;
+        margin-left: 30px;
+    }
+    
+    .form-hold button {
+        display: block;
+        margin: auto;
+        padding: 10px;
+        background-color: orange;
+        border: none;
+        border-radius: 5px;
+        width: 90%;
+    }
+    
+    .close-btn {
+        background-color: black;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 40px;
+        float: right;
+        margin-top: -20px;
+    }
+    
+    #popup:checked~.form-group {
+        margin-top: 0;
+        visibility: visible;
+    }
+</style>
+
+<body>
+    <header>
+        <a href="index.html"><button>Go Back</button></a>
+        <label for="popup" class="log-btn">Login</label>
+    </header>
+    <div class="form-group1">
+        <div class="form-hold1">
+            <form>
+                <h1>Register Here</h1>
+                <input class="input" type="text" placeholder="Fullname" required>
+                <input class="input" type="email" placeholder="Email Address" required>
+                <input class="input" type="password" name="password" id="" placeholder="Password" required>
+                <input class="input" type="tel" placeholder="Phone Number" required>
+                <select name="Gender" id="Gender" required>
+                    <optgroup label="Gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </optgroup>
+                </select>
+
+                <div class="terms">
+                    <input type="checkbox" name="check" id="check" required>
+                    <p>I agree to the Terms and Conditions</p>
+                </div>
+                <div class="btn-area">
+                    <button type="reset" class="reset-btn">Reset</button>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="center">
+        <input type="checkbox" id="popup">
+        <div class="form-group">
+            <div class="form-hold">
+                <form>
+                    <label for="popup" class="close-btn"><i class="fas fa-xmark"></i></label>
+                    <h1>Login Form</h1>
+                    <label for="username">Username</label>
+                    <input type="text" name="username">
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email">
+                    <label for="Pasword">Pasword</label>
+                    <input type="password" name="password">
+                    <button>Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>CRYPTOS HOME &copy;</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="about img.png" type="image/x-icon">
+    <title>Crypto Homes| About Page</title>
+
+</head>
+
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        background-image: url(bg1.jpg);
+        background-size: cover;
+    }
+    
+    .header {
+        background-color: rgba(240, 248, 255, 0.164);
+        height: 100px;
+        width: 100%;
+        position: fixed;
+        backdrop-filter: blur(30px);
+        z-index: 1;
+    }
+    
+    .header .head-text {
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 100px;
+        margin-left: 20px;
+        color: white;
+        text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.70);
+    }
+    
+    .head-text marquee {
+        width: 410px;
+    }
+    
+    .header ul {
+        float: right;
+        line-height: 70px;
+        margin-right: 40px;
+    }
+    
+    .header ul li {
+        display: inline-block;
+        margin-left: 23px;
+        padding: 0px 10px;
+        transition: all .5s;
+        border-radius: 7px;
+        /* padding-right: 30px; */
+    }
+    
+    .header ul li.register-link {
+        display: none;
+    }
+    
+    .header ul li:hover {
+        transform: translateX(7px);
+    }
+    
+    .header ul li a {
+        color: black;
+        text-decoration: none;
+        font-size: 18px;
+        color: orange;
+    }
+    
+    .header ul button {
+        float: right;
+        margin-top: 20px;
+        padding: 10px;
+        width: 80px;
+        margin: 17px 4px;
+        margin-left: 10px;
+    }
+    
+    .header ul .login-btn {
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
+    
+    .header ul .sign-btn {
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
+    
+    .header .checkBtn {
+        float: right;
+        font-size: 20px;
+        line-height: 100px;
+        margin-right: 34px;
+        display: none;
+    }
+    
+    .header .checkBtn i {
+        background-color: #fff;
+        padding: 8px 10px;
+        border-radius: 5px;
+    }
+    
+    #check {
+        display: none;
+    }
+    
+    @media screen and (max-width: 720px) {
+        .header .head-text marquee {
+            width: 310px;
+            font-size: 20px;
+        }
+        .header ul {
+            background-color: rgba(0, 0, 0, 0.562);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(40px);
+            width: 90%;
+            height: 100vh;
+            position: absolute;
+            top: 85px;
+            transition: all .6s;
+            left: -100%;
+        }
+        .header ul li {
+            display: block;
+            margin: auto;
+            text-align: center;
+            line-height: 100px;
+        }
+        .header ul li.register-link {
+            display: block;
+        }
+        .header ul li:hover {
+            background-color: transparent;
+        }
+        .header ul li a {
+            color: white;
+        }
+        .header .btn-hold {
+            display: none;
+        }
+        .header .checkBtn {
+            margin-right: 20px;
+            display: block;
+        }
+        #check:checked~ul {
+            left: 0;
+        }
+        .container {
+            width: 100%;
+        }
+    }
+    
+    @media screen and (max-width:400px) {
+        .head-text marquee {
+            width: 200px;
+            font-size: 10px;
+        }
+    }
+    
+    @media screen and (max-width: 1300px) {
+        .header .head-text marquee {
+            width: 310px;
+            font-size: 20px;
+        }
+        .header ul {
+            background-color: black;
+            width: 90%;
+            position: absolute;
+            top: 85px;
+            transition: all .6s;
+            left: -100%;
+        }
+        .header ul li {
+            display: block;
+            margin: auto;
+            text-align: center;
+            line-height: 100px;
+        }
+        .header ul li.register-link {
+            display: block;
+        }
+        .header ul li:hover {
+            background-color: transparent;
+        }
+        .header ul li a {
+            color: white;
+        }
+        .header .btn-hold {
+            display: none;
+        }
+        .header .checkBtn {
+            margin-right: 20px;
+            display: block;
+        }
+        #check:checked~ul {
+            left: 0;
+        }
+        .container {
+            width: 100%;
+        }
+    }
+    
+    .body-bg {
+        background-color: rgba(0, 0, 0, 0.747);
+        /* height: 100vh; */
+    }
+    
+    .body-content {
+        padding: 20px 0px;
+        padding-top: 100px;
+    }
+    
+    .body-content .label {
+        color: white;
+        text-align: center;
+        font-size: 20px;
+    }
+    
+    .about {
+        background-color: #ffffff;
+        width: fit-content;
+        padding: 40px 00px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: auto;
+        border-radius: 8px;
+        margin-bottom: 70px;
+    }
+    
+    .about-img {
+        width: 320px;
+        margin: 10px 40px;
+    }
+    
+    .about-img img {
+        animation: rotate 5s infinite;
+    }
+    
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    
+    .about-text {
+        margin: 10px 40px;
+    }
+    
+    .about-text p {
+        width: 400px;
+        font-size: 18px;
+        text-align: justify;
+    }
+    
+    .about-text button {
+        padding: 10px;
+        background-color: black;
+        color: rgba(255, 255, 255, 0.993);
+        border: none;
+        border-radius: 4px;
+        transition: all .5s;
+    }
+    
+    .about-text button:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    
+    @media screen and (max-width: 720px) {
+        .about {
+            width: 400px;
+        }
+        .about .about-img {
+            width: 300px;
+        }
+        .about .about-text p {
+            width: 300px;
+        }
+    }
+    
+    footer {
+        background-color: rgb(15, 9, 1);
+        padding: 20px 0px;
+        color: white;
+        border-top: 6px solid orange;
+    }
+    
+    .foot-group {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .foot1,
+    .foot2,
+    .foot3,
+    .foot4 {
+        height: 300px;
+        margin: 10px 30px;
+    }
+    
+    .foot-group .foot1 p {
+        width: 320px;
+        text-align: justify;
+        margin-top: -16px;
+    }
+    
+    .foot-group .foot1 button {
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+    }
+    
+    .foot-group .foot2 li {
+        list-style: none;
+        padding-bottom: 10px;
+        margin-left: 20px;
+        transition: all .3s;
+    }
+    
+    .foot-group .foot2 li:hover {
+        padding-left: 6px;
+    }
+    
+    .foot-group .foot2 li a {
+        text-decoration: none;
+        margin-left: 8px;
+        color: white;
+    }
+    
+    .foot-group .foot2 li a:hover {
+        color: orange;
+    }
+    
+    .foot3 p {
+        width: 300px;
+    }
+    
+    .foot3 li {
+        list-style: none;
+        margin-left: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .foot3 li a {
+        color: white;
+        text-decoration: none;
+        margin-left: 10px;
+        transition: all .5s;
+    }
+    
+    .foot3 li a:hover {
+        text-decoration: underline;
+        color: rgb(120, 115, 201);
+    }
+    
+    .foot4 button {
+        height: 33px;
+        width: 33px;
+        margin: 0px 5px;
+        font-size: 17px;
+        transition: all .6s;
+    }
+    
+    .foot4 button:hover {
+        transform: rotate(360deg);
+        background-color: rgb(153, 101, 4);
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .banks-hold {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .banks-hold button {
+        height: 60px;
+        padding: 0px 20px;
+        margin: 10px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: none;
+        color: white;
+    }
+    
+    .banks-hold button i {
+        font-size: 27px;
+        margin-left: -4px;
+    }
+    
+    .banks-hold button label {
+        margin-left: 5px;
+        font-weight: bold;
+        font-size: 17px;
+    }
+    
+    @media screen and (max-width: 720px) {
+        footer .banks-hold {
+            margin-top: -70px;
+        }
+        footer .banks-hold button {
+            background-color: transparent;
+            color: rgb(155, 152, 152);
+            border: none;
+        }
+    }
+</style>
+
+<body>
+    <nav class="header">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkBtn"><i class="fas fa-bars"></i></label>
+        <label class="head-text"><marquee behavior="slow" direction="">WELCOME TO CRYPTOS HOME</marquee> </label>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="Services.html">Services</a>
+            </li>
+            <li>
+                <a href="About.html">About</a>
+            </li>
+            <li>
+                <a href="Contacts.html">Contact</a>
+            </li>
+            <li>
+                <a href="FAQ1.html">FAQ</a>
+            </li>
+            <li class="register-link">
+                <a href="login.html">Register</a>
+            </li>
+            <ul class="btn-hold">
+                <button class="login-btn">Logout</button>
+
+            </ul>
+        </ul>
+
+    </nav>
+
+    <div class="body-bg">
+
+        <div class="body-content">
+
+            <div class="label">
+                <h1>About Us</h1>
+            </div>
+
+            <div class="about">
+                <div class="about-img">
+                    <img src="about img.png" width="100%">
+                </div>
+
+                <div class="about-text">
+                    <h1>Crypto Homes</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque vitae perferendis totam eos reiciendis, ut quod aperiam earum molestias sapiente. Delectus quae neque tempora facilis tempore soluta similique minima doloremque dicta
+                        esse, veniam temporibus dignissimos. ut quod aperiam earum molestias sapiente. Delectus quae neque tempora facilis tempore soluta similique minima doloremque dicta esse, veniam temporibus dignissimos.</p>
+                    <button>Read More</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <footer>
+        <div class="foot-group">
+            <div class="foot1">
+                <h1>Cryptos Home</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate commodi cum laudantium ratione nobis animi sint numquam facilis. Cum, facere consequatur! Totam, unde!</p>
+                <button>Learn More</button>
+            </div>
+
+            <div class="foot2">
+                <h1>Other Links</h1>
+                <li> <i class="fas fa-caret-right"></i>
+                    <a href="">Home</a>
+                </li>
+                <li> <i class="fas fa-caret-right"></i>
+                    <a href="">Services</a>
+                </li>
+                <li> <i class="fas fa-caret-right"></i>
+                    <a href="">About us</a>
+                </li>
+                <li> <i class="fas fa-caret-right"></i>
+                    <a href="">Conact us</a>
+                </li>
+                <li> <i class="fas fa-caret-right"></i>
+                    <a href="">FAQ</a>
+                </li>
+            </div>
+
+            <div class="foot3">
+                <h1>Contact Us</h1>
+
+                <p>Lumen Plaza Opp. Limco Gas Station Off Ikeji Express Way Lagos State.</p>
+
+                <li><i class="fas fa-envelopes-bulk"></i>
+                    <a href="mailto:">cryptoshome@gmail.com</a>
+                </li>
+                <li> <i class="fas fa-phone"></i>
+                    <a href="tel:+">234 803 238 3849</a>
+                </li>
+                <li><i class="fas fa-phone"></i>
+                    <a href="tel:+">234 904 344 39485</a>
+                </li>
+            </div>
+
+            <div class="foot4">
+                <h1>Social Links</h1>
+                <button><i class="fab fa-facebook-f"></i></button>
+                <button><i class="fab fa-whatsapp"></i></button>
+                <button><i class="fab fa-instagram"></i></button>
+                <button><i class="fab fa-twitter"></i></button>
+            </div>
+        </div>
+        <div class="banks-hold">
+            <button><i class="fab fa-paypal"></i><label>Paypal</label></button>
+            <button><i class="fab fa-amazon-pay"></i><label>Amazon Pay</label></button>
+            <button><i class="fab fa-apple-pay"></i><label>Apple Pay</label></button>
+            <button><i class="fab fa-cc-visa"></i><label>Visa Pay</label></button>
+        </div>
+    </footer>
+</body>
+
+</html>
